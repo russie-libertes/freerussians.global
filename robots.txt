@@ -12,6 +12,6 @@ Disallow: /*_escaped_fragment_*
 Disallow:
 
 
-Sitemap: http://freerussians.global/sitemap.xml
-Sitemap: http://freerussians.global/sitemap-store.xml
-Host: freerussians.global
+Sitemap: http://frglobal.tilda.ws/sitemap.xml
+Sitemap: http://frglobal.tilda.ws/sitemap-store.xml
+Host: frglobal.tilda.ws
