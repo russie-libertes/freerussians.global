@@ -14,6 +14,6 @@ Disallow: /members/signup*
 Disallow:
 
 
-Sitemap: http://frglobal.tilda.ws/sitemap.xml
-Sitemap: http://frglobal.tilda.ws/sitemap-store.xml
-Host: frglobal.tilda.ws
+Sitemap: http://freerussians.global/sitemap.xml
+Sitemap: http://freerussians.global/sitemap-store.xml
+Host: freerussians.global
