@@ -5,7 +5,7 @@ DirectoryIndex page42778713.html
 
 AuthType Basic
 AuthName "Restricted Area"
-AuthUserFile /var/www/tilda/data/www/tilda.ws/.htpasswd
+AuthUserFile /var/www/tilda/data/www/freerussians.global/.htpasswd
 require valid-user
 Order deny,allow
 Deny from all
