@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>http://frglobal.tilda.ws/</loc>
-		<lastmod>2024-02-14T00:28:34+00:00</lastmod>
+		<loc>http://freerussians.global/</loc>
+		<lastmod>2024-03-05T22:29:58+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://frglobal.tilda.ws/eng</loc>
-		<lastmod>2024-02-14T00:28:34+00:00</lastmod>
+		<loc>http://freerussians.global/eng</loc>
+		<lastmod>2024-03-05T22:29:58+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://frglobal.tilda.ws/action</loc>
-		<lastmod>2024-02-14T00:28:34+00:00</lastmod>
+		<loc>http://freerussians.global/page44589045.html</loc>
+		<lastmod>2024-03-05T22:29:58+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://frglobal.tilda.ws/header</loc>
-		<lastmod>2024-02-14T00:28:35+00:00</lastmod>
+		<loc>http://freerussians.global/twoyearsofterror/</loc>
+		<lastmod>2024-03-05T22:29:58+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://freerussians.global/twoyearsofterror-eng</loc>
+		<lastmod>2024-03-05T22:29:58+00:00</lastmod>
 	</url>
 </urlset>
