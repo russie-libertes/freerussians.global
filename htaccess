@@ -1,0 +1,30 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page42778713.html
+
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /var/www/tilda/data/www/tilda.ws/.htpasswd
+require valid-user
+Order deny,allow
+Deny from all
+Satisfy any
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^eng$ page43643939.html [NC]
+RewriteRule ^eng/$ page43643939.html [NC]
+
+RewriteRule ^twoyearsofterror/$ page44870665.html [NC]
+RewriteRule ^twoyearsofterror//$ page44870665.html [NC]
+
+RewriteRule ^twoyearsofterror-eng$ page44889891.html [NC]
+RewriteRule ^twoyearsofterror-eng/$ page44889891.html [NC]
+
+RewriteRule ^members/ ma_start.html [NC]
+
+
