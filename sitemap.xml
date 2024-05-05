@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>http://freerussians.global/</loc>
-		<lastmod>2024-03-14T19:38:55+00:00</lastmod>
+		<lastmod>2024-05-05T19:50:59+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://freerussians.global/eng</loc>
-		<lastmod>2024-03-14T19:38:55+00:00</lastmod>
+		<lastmod>2024-05-05T19:50:59+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://freerussians.global/noputin</loc>
+		<lastmod>2024-05-05T19:50:59+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://freerussians.global/noputin_eng</loc>
+		<lastmod>2024-05-05T19:50:59+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://freerussians.global/twoyearsofterror/</loc>
-		<lastmod>2024-03-14T19:38:55+00:00</lastmod>
+		<lastmod>2024-05-05T19:51:00+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://freerussians.global/twoyearsofterror_eng</loc>
-		<lastmod>2024-03-14T19:38:56+00:00</lastmod>
+		<lastmod>2024-05-05T19:51:00+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://freerussians.global/heroesdontdie</loc>
-		<lastmod>2024-03-14T19:38:56+00:00</lastmod>
+		<lastmod>2024-05-05T19:51:00+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://freerussians.global/heroesdontdie_eng</loc>
-		<lastmod>2024-03-14T19:38:56+00:00</lastmod>
+		<lastmod>2024-05-05T19:51:00+00:00</lastmod>
 	</url>
 </urlset>

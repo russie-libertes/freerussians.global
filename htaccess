@@ -16,8 +16,14 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} /robots.txt
 RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
 RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
-RewriteRule ^eng$ page43643939.html [NC]
-RewriteRule ^eng/$ page43643939.html [NC]
+RewriteRule ^eng$ page48404825.html [NC]
+RewriteRule ^eng/$ page48404825.html [NC]
+
+RewriteRule ^noputin$ page48402149.html [NC]
+RewriteRule ^noputin/$ page48402149.html [NC]
+
+RewriteRule ^noputin_eng$ page43643939.html [NC]
+RewriteRule ^noputin_eng/$ page43643939.html [NC]
 
 RewriteRule ^twoyearsofterror/$ page44870665.html [NC]
 RewriteRule ^twoyearsofterror//$ page44870665.html [NC]
