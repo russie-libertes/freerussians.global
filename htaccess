@@ -19,6 +19,18 @@ RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
 RewriteRule ^eng$ page48404825.html [NC]
 RewriteRule ^eng/$ page48404825.html [NC]
 
+RewriteRule ^putinjail$ page50197901.html [NC]
+RewriteRule ^putinjail/$ page50197901.html [NC]
+
+RewriteRule ^putinjail_eng$ page50197921.html [NC]
+RewriteRule ^putinjail_eng/$ page50197921.html [NC]
+
+RewriteRule ^heroesdontdie$ page44589045.html [NC]
+RewriteRule ^heroesdontdie/$ page44589045.html [NC]
+
+RewriteRule ^heroesdontdie_eng$ page45121117.html [NC]
+RewriteRule ^heroesdontdie_eng/$ page45121117.html [NC]
+
 RewriteRule ^noputin$ page48402149.html [NC]
 RewriteRule ^noputin/$ page48402149.html [NC]
 
@@ -30,12 +42,6 @@ RewriteRule ^twoyearsofterror//$ page44870665.html [NC]
 
 RewriteRule ^twoyearsofterror_eng$ page44889891.html [NC]
 RewriteRule ^twoyearsofterror_eng/$ page44889891.html [NC]
-
-RewriteRule ^heroesdontdie$ page44589045.html [NC]
-RewriteRule ^heroesdontdie/$ page44589045.html [NC]
-
-RewriteRule ^heroesdontdie_eng$ page45121117.html [NC]
-RewriteRule ^heroesdontdie_eng/$ page45121117.html [NC]
 
 RewriteRule ^members/ ma_start.html [NC]
 
