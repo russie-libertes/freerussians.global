@@ -19,14 +19,14 @@ RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
 RewriteRule ^eng$ page48404825.html [NC]
 RewriteRule ^eng/$ page48404825.html [NC]
 
-RewriteRule ^vasilieva$ page51022369.html [NC]
-RewriteRule ^vasilieva/$ page51022369.html [NC]
-
 RewriteRule ^russiainjail$ page50853727.html [NC]
 RewriteRule ^russiainjail/$ page50853727.html [NC]
 
 RewriteRule ^russiainjail_eng$ page50853733.html [NC]
 RewriteRule ^russiainjail_eng/$ page50853733.html [NC]
+
+RewriteRule ^vasilieva$ page51022369.html [NC]
+RewriteRule ^vasilieva/$ page51022369.html [NC]
 
 RewriteRule ^freerussiaday$ page50839737.html [NC]
 RewriteRule ^freerussiaday/$ page50839737.html [NC]
