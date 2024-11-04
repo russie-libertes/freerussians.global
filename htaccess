@@ -28,6 +28,9 @@ RewriteRule ^andreygnyot_eng/$ page56546145.html [NC]
 RewriteRule ^f_ohmatdyt$ page57615483.html [NC]
 RewriteRule ^f_ohmatdyt/$ page57615483.html [NC]
 
+RewriteRule ^f_ohmatdyt_eng$ page57615685.html [NC]
+RewriteRule ^f_ohmatdyt_eng/$ page57615685.html [NC]
+
 RewriteRule ^russiainjail$ page50853727.html [NC]
 RewriteRule ^russiainjail/$ page50853727.html [NC]
 
@@ -66,6 +69,12 @@ RewriteRule ^noputin/$ page48402149.html [NC]
 
 RewriteRule ^noputin_eng$ page43643939.html [NC]
 RewriteRule ^noputin_eng/$ page43643939.html [NC]
+
+RewriteRule ^memorandum$ page57702081.html [NC]
+RewriteRule ^memorandum/$ page57702081.html [NC]
+
+RewriteRule ^memorandum_eng$ page57706175.html [NC]
+RewriteRule ^memorandum_eng/$ page57706175.html [NC]
 
 RewriteRule ^members/ ma_start.html [NC]
 
