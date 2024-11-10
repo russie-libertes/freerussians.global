@@ -19,6 +19,12 @@ RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
 RewriteRule ^eng$ page48404825.html [NC]
 RewriteRule ^eng/$ page48404825.html [NC]
 
+RewriteRule ^1000daysofwar$ page58007231.html [NC]
+RewriteRule ^1000daysofwar/$ page58007231.html [NC]
+
+RewriteRule ^memorandum$ page57702081.html [NC]
+RewriteRule ^memorandum/$ page57702081.html [NC]
+
 RewriteRule ^andreygnyot$ page56741379.html [NC]
 RewriteRule ^andreygnyot/$ page56741379.html [NC]
 
@@ -69,9 +75,6 @@ RewriteRule ^noputin/$ page48402149.html [NC]
 
 RewriteRule ^noputin_eng$ page43643939.html [NC]
 RewriteRule ^noputin_eng/$ page43643939.html [NC]
-
-RewriteRule ^memorandum$ page57702081.html [NC]
-RewriteRule ^memorandum/$ page57702081.html [NC]
 
 RewriteRule ^memorandum_eng$ page57706175.html [NC]
 RewriteRule ^memorandum_eng/$ page57706175.html [NC]
