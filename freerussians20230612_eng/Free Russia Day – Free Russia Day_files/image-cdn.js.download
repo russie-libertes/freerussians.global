@@ -1,0 +1,36 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+!function(){function t(){if(this.complete){const e=this.getAttribute("data-lazy-src");if(e&&this.src!==e)return void this.addEventListener("onload",t);const n=this.width,d=this.height;n&&n>0&&d&&d>0&&(this.setAttribute("width",n),this.setAttribute("height",d),i(this))}else this.addEventListener("onload",t)}var e=function(){const e=document.querySelectorAll("img[data-recalc-dims]");for(let i=0;i<e.length;i++)t.call(e[i])},i=function(t){t.removeAttribute("data-recalc-dims"),t.removeAttribute("scale")};"undefined"!=typeof window&&"undefined"!=typeof document&&("loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()),document.body.addEventListener("is.post-load",e)}();
+
+}
+/*
+     FILE ARCHIVED ON 06:54:17 Jun 11, 2023 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:36:15 Nov 26, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.488
+  exclusion.robots: 0.015
+  exclusion.robots.policy: 0.007
+  esindex: 0.009
+  cdx.remote: 32.739
+  LoadShardBlock: 313.239 (3)
+  PetaboxLoader3.datanode: 268.439 (5)
+  PetaboxLoader3.resolve: 196.229 (3)
+  load_resource: 193.982
+  loaddict: 78.054
+*/
