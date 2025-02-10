@@ -76,8 +76,8 @@ RewriteRule ^heroesdontdie/$ page44589045.html [NC]
 RewriteRule ^heroesdontdie_eng$ page45121117.html [NC]
 RewriteRule ^heroesdontdie_eng/$ page45121117.html [NC]
 
+RewriteRule ^twoyearsofterror$ page44870665.html [NC]
 RewriteRule ^twoyearsofterror/$ page44870665.html [NC]
-RewriteRule ^twoyearsofterror//$ page44870665.html [NC]
 
 RewriteRule ^twoyearsofterror_eng$ page44889891.html [NC]
 RewriteRule ^twoyearsofterror_eng/$ page44889891.html [NC]
