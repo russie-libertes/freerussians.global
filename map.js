@@ -51,6 +51,7 @@ function format_event_popup(a)
     const elem = document.getElementById('popup').content.cloneNode(true);
     elem.querySelector('#place_name').innerText = [a.dataset.city, a.dataset.country].filter(s => s != '').join(', ');
     elem.querySelector('#place_date').innerText = [a.dataset.date, a.dataset.time].filter(s => s != '').join(', ');
+    elem.querySelector('#place_url').href = a.dataset.url;
     return elem.firstElementChild;
 }
 
