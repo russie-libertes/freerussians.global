@@ -58,35 +58,7 @@ RU
 
 <a hidden target="_blank" id="map_copyright" href="https://osm.org/copyright">map &copy; OpenStreetMap</a>
 
-
-<style>
-.markerhighlighted
-{
-    fill: hsl(240, 87%, 18%) !important;
-}
-.markerupcoming
-{
-    fill: hsl(230, 69%, 50%);
-    fill-opacity: 1.0;
-}
-
-.markerpast
-{
-    fill: hsl(215, 59%, 53%);
-    fill-opacity: 1.0;
-}
-
-#map
-{
-    height: 200px; 
-    width: 100%/*800px*/; 
-}
-
-a.eventlink, a.eventlink:visited{
-     color: blue;
-}
-
-</style>
+<link rel="stylesheet" href="map.css" />
 
 <div id="map">
     <template id="popup">
@@ -102,11 +74,11 @@ a.eventlink, a.eventlink:visited{
 <table class="t431__table" data-table-width="8%;5%;45%;42%" data-target-blank="on" width="100%"><tbody class="t431__tbody" id="allevents">
 {% for g in events_grouped_by_country %}{% assign gg = g.items | sort: "city" %}
     <tr class="t431__oddrow"><td class="t431__td t-text" width="8%"><b>{{ g.name }}</b></td><td class="t431__td t-text" width="5%"></td><td class="t431__td t-text" width="45%"></td><td class="t431__td t-text" width="42%"></td></tr> 
-    {% for e in gg %}{% assign date0 = e.date | split: ' ' | first %}{% assign date1 = e.date | split: ' ' | last %}
+    {% for e in gg %}
         {% assign latlon = site.data.citygeocoder | where: "city", e.cityengorlatlon | map: "latlon" | first %} 
         {% if !latlon and e.cityengorlatlon contains ',' %}{% assign latlon = e.cityengorlatlon %}{% endif %}
 
-        <tr class="event {% cycle g.name: 't431__evenrow', 't431__oddrow' %}" data-latlon="{{ latlon }}" data-country="{{ e.country }}" data-city="{{ e.city }}" data-mapmarkerkey="{{ e.country }}-{{ e.city }}" data-date="{{ date0 }}" data-time="{{ date1 }}"><td class="t431__td t-text" width="8%">{{ e.city }}</td><td class="t431__td t-text" width="5%">{% if latlon and latlon != '' %}<a class="eventlink" href="#" onclick="return navigate(event);">{{ e.date }}</a>{% else %}{{ e.date }}{% endif %}</td><td class="t431__td t-text" width="45%">{% if e.orgurl and e.orgurl != '' %}<a target="_blank" rel="noopener" href="{{ e.orgurl }}">{{ e.orgname }}</a>{% else %}{{ e.orgname }}{% endif %}</td><td class="t431__td t-text" width="42%">{% if e.eventurl and e.eventurl != '' %}<a target="_blank" rel="noopener" href="{{ e.eventurl }}">{{ e.eventname }}</a>{% else %}{{ e.eventname }}{% endif %}</td></tr>
+        <tr class="event {% cycle g.name: 't431__evenrow', 't431__oddrow' %}" data-latlon="{{ latlon }}" data-country="{{ e.country }}" data-city="{{ e.city }}" data-mapmarkerkey="{{ e.country }}-{{ e.city }}" data-date="{{ e.date }}" data-time="{{ e.time }}"><td class="t431__td t-text" width="8%">{{ e.city }}</td><td class="t431__td t-text" width="5%">{% if latlon and latlon != '' %}<a class="eventlink" href="#" onclick="return navigate(event);">{{ e.date }} {{ e.time }}</a>{% else %}{{ e.date }} {{ e.time }}{% endif %}</td><td class="t431__td t-text" width="45%">{% if e.orgurl and e.orgurl != '' %}<a target="_blank" rel="noopener" href="{{ e.orgurl }}">{{ e.orgname }}</a>{% else %}{{ e.orgname }}{% endif %}</td><td class="t431__td t-text" width="42%">{% if e.eventurl and e.eventurl != '' %}<a target="_blank" rel="noopener" href="{{ e.eventurl }}">{{ e.eventname }}</a>{% else %}{{ e.eventname }}{% endif %}</td></tr>
     {% endfor %}
 {% endfor %}
 </tbody></table>

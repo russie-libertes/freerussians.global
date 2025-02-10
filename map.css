@@ -1,0 +1,25 @@
+.markerhighlighted
+{
+    fill: hsl(240, 87%, 18%) !important;
+}
+.markerupcoming
+{
+    fill: hsl(230, 69%, 50%);
+    fill-opacity: 1.0;
+}
+
+.markerpast
+{
+    fill: hsl(215, 59%, 53%);
+    fill-opacity: 1.0;
+}
+
+#map
+{
+    height: 200px; 
+    width: 100%/*800px*/; 
+}
+
+a.eventlink, a.eventlink:visited{
+     color: blue;
+}
