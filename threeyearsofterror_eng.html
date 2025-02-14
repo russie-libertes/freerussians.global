@@ -62,8 +62,8 @@ RU
 {% for g in events_grouped_by_country %}{% assign gg = g.items | sort: "cityeng" %}
     <tr class="t431__oddrow"><td class="t431__td t-text" width="8%"><b>{{ g.name | upcase }}</b></td><td class="t431__td t-text" width="5%"></td><td class="t431__td t-text" width="45%"></td><td class="t431__td t-text" width="42%"></td></tr> 
     {% for e in gg %}
-        {% assign orgname = e.orgnameeng %}{% if !orgname or orgname == '' %}{% assign orgname = e.orgname %}{% endif %}
-        <tr>{% assign eventname = e.eventnameeng %}<td>before: {{ eventname }}</td>{% if !eventname or eventname == '' %}{% assign eventname = e.eventname %}{% endif %}<td>after: {{ eventname }}</td></tr>
+        {% assign orgname = e.orgnameeng %}{% if orgname == '' %}{% assign orgname = e.orgname %}{% endif %}
+        <tr>{% assign eventname = e.eventnameeng %}<td>before: {{ eventname }}</td>{% if eventname == '' %}{% assign eventname = e.eventname %}{% endif %}<td>after: {{ eventname }}</td></tr>
         {% assign url = e.eventurl %}{% if !url or url == '' %}{% assign url = e.orgurl %}{% endif %}
         {% assign latlon = e.latlon %}{% if !latlon or latlon == '' %}{% assign latlon = site.data.citygeocoder | where: "cityeng", e.cityeng | map: "latlon" | first %}{% endif %}
         {% assign date_parts = e.date | split: '/' | slice: 0, 2%}{% assign month = date_parts | first | prepend: '00' | slice: -2, 2 %}{% assign day = date_parts | last | prepend: '00' | slice: -2, 2 %}
