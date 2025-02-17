@@ -39,7 +39,7 @@ jobs:
             sed -i '1i---\n---' threeyearsofterror_eng.html
             sed -i '1i---\n---' threeyearsofterror.html
             sed -i '1i---\n---' eng.html
-            sed -i '1i---\n---' eng_withTable.html
+            #sed -i '1i---\n---' eng_withTable.html
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
