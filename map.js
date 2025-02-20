@@ -1,6 +1,6 @@
 map = null;
 
-function init_and_populate_map(id, events)
+function init_and_populate_map(id, events, make_popup = format_event_popup)
 {
     map = L.map(id);
     L.tileLayer(decodeURI(document.getElementById('link_tiles').href), {attribution: document.getElementById('map_copyright').outerHTML.replace('hidden', ''), maxZoom: 19 }).addTo(map);
@@ -22,7 +22,7 @@ function init_and_populate_map(id, events)
             continue;
         
         const marker = L.circleMarker(latlon_num, {radius: 5, stroke: false, className: a.parentElement.classList.contains('eventactive') ? 'markerupcoming' : 'markerpast'}).addTo(map);
-        marker.bindPopup(format_event_popup(a).outerHTML);
+        marker.bindPopup(make_popup(a).outerHTML);
         marker.on('click', marker_onclick);
 
         marker.mapmarkerkey = a.dataset.mapmarkerkey;
@@ -52,6 +52,15 @@ function format_event_popup(a)
     elem.querySelector('#place_name').innerText = [a.dataset.city, a.dataset.country].filter(s => s != '').join(', ');
     elem.querySelector('#place_date').innerText = [a.dataset.date, a.dataset.time].filter(s => s != '').join(', ');
     elem.querySelector('#place_url').href = a.dataset.url;
+    return elem.firstElementChild;
+}
+
+function format_org_popup(a)
+{
+    const elem = document.getElementById('popup').content.cloneNode(true);
+    elem.querySelector('#place_name').innerText = [a.dataset.city, a.dataset.country].filter(s => s != '').join(', ');
+    elem.querySelector('#org_name').innerText = a.dataset.orgname;
+    elem.querySelector('#org_url').href = a.dataset.orgurl;
     return elem.firstElementChild;
 }
 
