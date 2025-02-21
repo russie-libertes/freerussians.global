@@ -60,7 +60,7 @@ function format_org_popup(a)
     const elem = document.getElementById('popup').content.cloneNode(true);
     elem.querySelector('#place_name').innerText = [a.dataset.city, a.dataset.country].filter(s => s != '').join(', ');
     elem.querySelector('#org_name').innerText = a.dataset.orgname;
-    elem.querySelector('#org_url').href = a.dataset.orgurl;
+    elem.querySelector('#org_url').href = a.dataset.url;
     return elem.firstElementChild;
 }
 
