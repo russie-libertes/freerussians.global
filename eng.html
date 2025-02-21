@@ -46,7 +46,7 @@ window.onload=function() {t404_unifyHeights('764408951');};}});</script> <style>
 
 </div> </div> </div> 
 
-<div id="gen_html">
+<div hidden id="gen_html">
 <link href="https://tile.openstreetmap.org/{z}/{x}/{y}.png" id="link_tiles" />
 <link rel="stylesheet" href="leaflet.css" />
 <script src="leaflet.js"></script>
@@ -56,13 +56,11 @@ window.onload=function() {t404_unifyHeights('764408951');};}});</script> <style>
     <template id="popup">
         <div>
             <h3 id="place_name"></h3>
-            <h4 id="place_date"></h4>
-            <a id="place_url">Event link</a>
+            <a id="org_url"><span id="org_name"></span></a>
         </div>
     </template>
 </div>
 {% assign events = site.data.assomap | where: "ok", "ok" %}
-{% assign events_grouped_by_country = events | group_by: "countryeng" | sort: "name" %}
 <table hidden><tbody id="allevents">
 {% for e in events %}
     {% assign orgname = e.orgname %}
