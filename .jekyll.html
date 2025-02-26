@@ -1,0 +1,72 @@
+
+<div id="gen_html">
+<link href="https://tile.openstreetmap.org/{z}/{x}/{y}.png" id="link_tiles" />
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+<a hidden target="_blank" id="map_copyright" href="https://osm.org/copyright">map &copy; OpenStreetMap</a>
+<link rel="stylesheet" href="map.css" />
+<div id="map">
+    <template id="popup">
+        <div>
+            <h3 id="place_name"></h3>
+            <h4 id="place_date"></h4>
+            <a id="place_url">Event link</a>
+        </div>
+    </template>
+</div>
+{% assign events = site.data.events24022025 | where: "ok", "ok" %}
+{% assign events_grouped_by_country = events | group_by: "country" | sort: "name" %}
+<table class="t431__table" data-table-width="8%;5%;45%;42%" data-target-blank="on" width="100%"><tbody class="t431__tbody" id="allevents">
+{% for g in events_grouped_by_country %}{% assign gg = g.items | sort: "city" %}
+    <tr class="t431__oddrow"><td class="t431__td t-text" width="8%"><b>{{ g.name | upcase }}</b></td><td class="t431__td t-text" width="5%"></td><td class="t431__td t-text" width="45%"></td><td class="t431__td t-text" width="42%"></td></tr> 
+    {% for e in gg %}
+        {% assign orgname = e.orgname %}
+        {% assign eventname = e.eventname %}
+        {% assign url = e.eventurl %}{% if url == '' %}{% assign url = e.orgurl %}{% endif %}
+        {% assign latlon = e.latlon %}{% if latlon == '' %}{% assign latlon = site.data.citygeocoder | where: "cityeng", e.cityeng | map: "latlon" | first %}{% endif %}
+        {% assign date_parts = e.date | split: '/' | slice: 0, 2%}{% assign month = date_parts | first | prepend: '00' | slice: -2, 2 %}{% assign day = date_parts | last | prepend: '00' | slice: -2, 2 %}
+        <tr class="event {% cycle g.name: 't431__evenrow', 't431__oddrow' %}" data-latlon="{{ latlon }}" data-country="{{ e.countryeng }}" data-city="{{ e.cityeng }}" data-mapmarkerkey="{{ e.countryeng }}-{{ e.cityeng }}" data-date="{{ day }}/{{ month }}" data-time="{{ e.time | date: '%R'}}" data-url="{{ url }}"><td class="t431__td t-text" width="8%">{{ e.city }}</td><td class="t431__td t-text" width="5%">{{ day }}/{{ month }} {{ e.time | date: '%R' }}</td><td class="t431__td t-text" width="45%">{% if e.orgurl and e.orgurl != '' %}<a target="_blank" rel="noopener" href="{{ e.orgurl }}">{{ orgname }}</a>{% else %}{{ orgname }}{% endif %}</td><td class="t431__td t-text" width="42%">{% if e.eventurl and e.eventurl != '' %}<a target="_blank" rel="noopener" href="{{ e.eventurl }}">{{ eventname }}</a>{% else %}{{ eventname }}{% endif %}</td></tr>
+    {% endfor %}
+{% endfor %}
+</tbody></table>
+<script src="map.js"></script>
+<script>
+[mapmarkers, markers_within_keys] = init_and_populate_map('map', document.querySelectorAll('#allevents > tr.event:not([data-latlon=""])'));
+</script>
+</div>
+
+<div id="gen_html">
+<link href="https://tile.openstreetmap.org/{z}/{x}/{y}.png" id="link_tiles" />
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+<a hidden target="_blank" id="map_copyright" href="https://osm.org/copyright">map &copy; OpenStreetMap</a>
+<link rel="stylesheet" href="map.css" />
+<div id="map">
+    <template id="popup">
+        <div>
+            <h3 id="place_name"></h3>
+            <h4 id="place_date"></h4>
+            <a id="place_url">Event link</a>
+        </div>
+    </template>
+</div>
+{% assign events = site.data.events24022025 | where: "ok", "ok" %}
+{% assign events_grouped_by_country = events | group_by: "countryeng" | sort: "name" %}
+<table class="t431__table" data-table-width="8%;5%;45%;42%" data-target-blank="on" width="100%"><tbody class="t431__tbody" id="allevents">
+{% for g in events_grouped_by_country %}{% assign gg = g.items | sort: "cityeng" %}
+    <tr class="t431__oddrow"><td class="t431__td t-text" width="8%"><b>{{ g.name | upcase }}</b></td><td class="t431__td t-text" width="5%"></td><td class="t431__td t-text" width="45%"></td><td class="t431__td t-text" width="42%"></td></tr> 
+    {% for e in gg %}
+        {% assign orgname = e.orgnameeng %}{% if orgname == '' %}{% assign orgname = e.orgname %}{% endif %}
+        {% assign eventname = e.eventnameeng %}{% if eventname == '' %}{% assign eventname = e.eventname %}{% endif %}
+        {% assign url = e.eventurl %}{% if url == '' %}{% assign url = e.orgurl %}{% endif %}
+        {% assign latlon = e.latlon %}{% if latlon == '' %}{% assign latlon = site.data.citygeocoder | where: "cityeng", e.cityeng | map: "latlon" | first %}{% endif %}
+        {% assign date_parts = e.date | split: '/' | slice: 0, 2%}{% assign month = date_parts | first | prepend: '00' | slice: -2, 2 %}{% assign day = date_parts | last | prepend: '00' | slice: -2, 2 %}
+        <tr class="event {% cycle g.name: 't431__evenrow', 't431__oddrow' %}" data-latlon="{{ latlon }}" data-country="{{ e.countryeng }}" data-city="{{ e.cityeng }}" data-mapmarkerkey="{{ e.countryeng }}-{{ e.cityeng }}" data-date="{{ day }}/{{ month }}" data-time="{{ e.time | date: '%R'}}" data-url="{{ url }}"><td class="t431__td t-text" width="8%">{{ e.cityeng }}</td><td class="t431__td t-text" width="5%">{{ day }}/{{ month }} {{ e.time | date: '%R' }}</td><td class="t431__td t-text" width="45%">{% if e.orgurl and e.orgurl != '' %}<a target="_blank" rel="noopener" href="{{ e.orgurl }}">{{ orgname }}</a>{% else %}{{ orgname }}{% endif %}</td><td class="t431__td t-text" width="42%">{% if e.eventurl and e.eventurl != '' %}<a target="_blank" rel="noopener" href="{{ e.eventurl }}">{{ eventname }}</a>{% else %}{{ eventname }}{% endif %}</td></tr>
+    {% endfor %}
+{% endfor %}
+</tbody></table>
+<script src="map.js"></script>
+<script>
+[mapmarkers, markers_within_keys] = init_and_populate_map('map', document.querySelectorAll('#allevents > tr.event:not([data-latlon=""])'));
+</script>
+</div>

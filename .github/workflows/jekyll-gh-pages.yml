@@ -34,13 +34,12 @@ jobs:
         run: |
             mkdir -p _data
             curl 'https://docs.google.com/spreadsheets/d/1HTj0ONZ7Y0X4pj7qBf-OKzC8lluiBFjCy9Xwk1J_jHg/gviz/tq?tqx=out:csv&sheet=citygeocoder'   > _data/citygeocoder.csv
-            curl 'https://docs.google.com/spreadsheets/d/1HTj0ONZ7Y0X4pj7qBf-OKzC8lluiBFjCy9Xwk1J_jHg/gviz/tq?tqx=out:csv&sheet=events24022025' > _data/events24022025.csv
             curl 'https://docs.google.com/spreadsheets/d/1HTj0ONZ7Y0X4pj7qBf-OKzC8lluiBFjCy9Xwk1J_jHg/gviz/tq?tqx=out:csv&sheet=assomap'        > _data/assomap.csv
-            sed -i '1i---\n---' threeyearsofterror_eng.html
-            sed -i '1i---\n---' threeyearsofterror.html
+            #curl 'https://docs.google.com/spreadsheets/d/1HTj0ONZ7Y0X4pj7qBf-OKzC8lluiBFjCy9Xwk1J_jHg/gviz/tq?tqx=out:csv&sheet=events24022025' > _data/events24022025.csv
             sed -i '1i---\n---' index.html
             sed -i '1i---\n---' eng.html
-            #sed -i '1i---\n---' eng_withTable.html
+            #sed -i '1i---\n---' threeyearsofterror_eng.html
+            #sed -i '1i---\n---' threeyearsofterror.html
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
