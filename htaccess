@@ -10,6 +10,7 @@ require valid-user
 Order deny,allow
 Deny from all
 Satisfy any
+RewriteRule ^ - [co=nocache:true:.:1:/]
 
 RewriteEngine On
 
@@ -18,6 +19,9 @@ RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
 RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
 RewriteRule ^eng$ page48404825.html [NC]
 RewriteRule ^eng/$ page48404825.html [NC]
+
+RewriteRule ^heroesdontdie2025$ page64137187.html [NC]
+RewriteRule ^heroesdontdie2025/$ page64137187.html [NC]
 
 RewriteRule ^threeyearsofterror$ page62634375.html [NC]
 RewriteRule ^threeyearsofterror/$ page62634375.html [NC]
