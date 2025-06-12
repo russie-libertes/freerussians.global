@@ -20,6 +20,12 @@ RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
 RewriteRule ^eng$ page48404825.html [NC]
 RewriteRule ^eng/$ page48404825.html [NC]
 
+RewriteRule ^freerussiaday2025$ page70692939.html [NC]
+RewriteRule ^freerussiaday2025/$ page70692939.html [NC]
+
+RewriteRule ^freerussiaday2025_eng$ page70695879.html [NC]
+RewriteRule ^freerussiaday2025_eng/$ page70695879.html [NC]
+
 RewriteRule ^heroesdontdie2025$ page64137187.html [NC]
 RewriteRule ^heroesdontdie2025/$ page64137187.html [NC]
 
